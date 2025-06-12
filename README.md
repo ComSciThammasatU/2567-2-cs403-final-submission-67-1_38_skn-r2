@@ -61,6 +61,7 @@ Taledge เป็นแพลตฟอร์มสำหรับนักเข
 
 ### 🌍 ระบบโลกและไอเท็ม
 ![world](./screenshots/world.png)
+
 ---
 
 ## 🚀 วิธีติดตั้ง
@@ -71,8 +72,7 @@ Taledge เป็นแพลตฟอร์มสำหรับนักเข
 git clone https://github.com/ComSciThammasatU/2567-2-cs403-final-submission-67-1_38_skn-r2.git
 cd 2567-2-cs403-final-submission-67-1_38_skn-r2/project
 
-### 2. Backend (Node + Python)
-
+2. Backend (Node + Python)
 cd server
 npm install
 python -m venv venv
@@ -81,16 +81,19 @@ pip install pythainlp nltk flask
 python -m nltk.downloader omw-1.4
 node app.js
 
+
 .env ตัวอย่าง:
 MONGODB_URI=mongodb://localhost:27017/taledge
 PORT=5000
 
-###3. Frontend
+3. Frontend
 cd ../src
 npm install
 npm start
 
+
 ###💡 วิธีใช้งาน
+
 1. เปิด http://localhost:3000
 
 2. สมัครสมาชิก → สร้างโปรเจกต์
@@ -105,8 +108,7 @@ npm start
 
 - 🧾 บทนิยาย
 
-- 📂 โครงสร้างโปรเจกต์
-
+📂 โครงสร้างโปรเจกต์
 
 project/
 ├── server/
@@ -118,6 +120,7 @@ project/
 ├── package.json
 
 ###👨‍👩‍👧‍👦 ผู้จัดทำ
+```bash
 - นาย สิรวิชญ์ ทิมสุวรรณ — sirawich.tim@dome.tu.ac.th
 
 - นางสาว ณิชาภัทร ชมภูน้อย — nichapat.cho@dome.tu.ac.th
