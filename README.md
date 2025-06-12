@@ -11,7 +11,7 @@
 
 **ผู้จัดทำโครงงาน:**
 1. นาย สิรวิชญ์ ทิมสุวรรณ  6309682067  sirawich.tim@dome.tu.ac.th
-2. นางสาว ณิชาภัทร ชมภูน้อย 6309610134 nichapatt.cho@dome.tu.ac.th
+2. นางสาว ณิชาภัทร ชมภูน้อย 6309610134 nichapat.cho@dome.tu.ac.th
    
 Manual / Instructions for your projects starts here !
 # Topic 1
