@@ -49,19 +49,20 @@ Taledge เป็นแพลตฟอร์มสำหรับนักเข
 ## 🖥 Screenshots
 
 ### 🔍 ภาพรวมระบบ
-![Editor](./screenshots/Editor.png) 
+![Editor](./project/screenshots/Editor.png)
+
 
 ### 🧩 ความสัมพันธ์ตัวละคร
-![Relationships](./screenshots/Relationships.png) 
+![Relationships](./project/screenshots/Relationships.png)
 
 ### ✍️ เขียนบทนิยาย
-![Manuscript](./screenshots/Manuscript.png) 
+![Manuscript](./project/screenshots/Manuscript.png) 
 
 ### 🗓 หน้ารวมตัวละครต่างๆ 
-![Character](./screenshots/Character.png)
+![Character](./project/screenshots/Character.png)
 
 ### 🌍 ระบบโลกและไอเท็ม
-![world](./screenshots/world.png)
+![world](./project/screenshots/world.png)
 
 ---
 
