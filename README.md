@@ -35,14 +35,14 @@ Taledge เป็นแพลตฟอร์มสำหรับนักเข
 
 ## 🧰 Technologies Used
 
-| Tech              | Purpose                       |
-|-------------------|-------------------------------|
-| React.js          | Frontend SPA                  |
-| Node.js + Express | Backend API                   |
-| MongoDB           | Database                      |
-| Python (Flask)    | Dictionary API (PyThaiNLP)    |
-| React Flow        | วาดความสัมพันธ์แบบ drag & drop |
-| CSS Modules + Tailwind | UI Design               |
+| Tech              | Purpose                            |
+|-------------------|-------------------------------------|
+| React.js          | Frontend SPA                        |
+| Node.js + Express | Backend API                         |
+| MongoDB           | Database                            |
+| Python (Flask)    | Dictionary API (PyThaiNLP + NLTK)   |
+| React Flow        | วาดความสัมพันธ์แบบ drag & drop     |
+| Tailwind + CSS    | UI Design                           |
 
 ---
 
@@ -51,12 +51,11 @@ Taledge เป็นแพลตฟอร์มสำหรับนักเข
 ### 🔍 ภาพรวมระบบ
 ![Editor](./project/screenshots/Editor.png)
 
-
 ### 🧩 ความสัมพันธ์ตัวละคร
 ![Relationships](./project/screenshots/Relationships.png)
 
 ### ✍️ เขียนบทนิยาย
-![Manuscript](./project/screenshots/Manuscript.png) 
+![Manuscript](./project/screenshots/Manuscript.png)
 
 ### 🗓 หน้ารวมตัวละครต่างๆ 
 ![Character](./project/screenshots/Character.png)
@@ -68,51 +67,58 @@ Taledge เป็นแพลตฟอร์มสำหรับนักเข
 
 ## 🚀 วิธีติดตั้ง
 
-### 1. Clone โปรเจกต์
+### 1. ติดตั้ง Python และ Node.js
+
+- [✅ ดาวน์โหลด Python](https://www.python.org/downloads/)  
+- [✅ ดาวน์โหลด Node.js](https://nodejs.org/en)
+
+---
+
+### 2. Clone โปรเจกต์
 
 ```bash
 git clone https://github.com/ComSciThammasatU/2567-2-cs403-final-submission-67-1_38_skn-r2.git
 cd 2567-2-cs403-final-submission-67-1_38_skn-r2/project
 ```
 
-### 2. Backend (Node + Python)
+---
+
+### 3. Setup ฝั่ง Python (Dictionary API)
 
 ```bash
 cd server
-npm install
 python -m venv venv
-venv\Scripts\activate
-pip install pythainlp nltk flask
+venv\Scripts\activate        # สำหรับ Windows
+pip install flask pythainlp nltk
 python -m nltk.downloader omw-1.4
-node app.js
-```
-
-ตัวอย่าง `.env`:
-
-```env
-MONGODB_URI=mongodb://localhost:27017/taledge
-PORT=5000
-```
-
-### 3. Frontend
-
-```bash
-cd ../src
-npm install
-npm start
+python app.py                  # เปิด Dictionary API ที่ http://127.0.0.1:5000/lookup
 ```
 
 ---
 
-## 💡 วิธีใช้งาน
+### 4. Setup ฝั่ง Node.js (Backend: Express API)
 
-1. เปิด http://localhost:3000
-2. สมัครสมาชิก → สร้างโปรเจกต์
-3. เลือกใช้งานเครื่องมือด้านซ้ายมือ เช่น:
-   - 🧍 ตัวละคร  
-   - 🌐 โลก
-   - ⏳ ไทม์ไลน์
-   - 🧾 บทนิยาย
+```bash
+npm install express mongoose dotenv cors
+node server.js                 # หรือ node app.js (ตามชื่อไฟล์หลักของคุณ)
+```
+
+> ตรวจสอบให้ไฟล์ `.env` มีค่าเช่นนี้:
+
+```env
+MONGODB_URI=mongodb+srv://Guyzaza18121@cluster0.jrkaopc.mongodb.net/fictiondb
+PORT=5000
+```
+
+---
+
+### 5. Setup ฝั่ง Frontend (React)
+
+```bash
+cd ../src
+npm install
+npm start                      # เปิดหน้าเว็บที่ http://localhost:3000
+```
 
 ---
 
@@ -125,6 +131,7 @@ project/
 ├── src/
 │   ├── pages/, components/
 ├── public/
+├── screenshots/
 ├── venv/
 ├── package.json
 ```
