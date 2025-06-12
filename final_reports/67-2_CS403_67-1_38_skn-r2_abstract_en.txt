@@ -2,8 +2,17 @@
 Taledge
 ABSTRACT
 
-    Writing a novel with a clear and engaging plot is essential for authors to create high-quality works. However, crafting a complex plot and organizing its elements systematically remain challenging tasks for many writers.
-    The project “TALEDGE: The Story Organizer”, a web application for novel plot design, has been developed to assist writers in structuring their plots effectively. The system features tools for creating plot structures, managing characters, and organizing story events.
-    With the design and functionality of this web application, the developers hope that it will support writers in systematically organizing and designing their story plots. Additionally, the application aims to meet its intended purpose and be a practical tool for real-world use.
-
-Keywords: plot design, writers, web application, novel writing
+    Writing a novel with a clear and engaging plot is essential for 
+    authors to create high-quality works. However, crafting a complex plot and 
+    organizing its elements systematically remain challenging tasks for many 
+    writers. 
+    The project “TALEDGE: The Story Organizer”, a web application 
+    for novel plot design, has been developed to assist writers in structuring 
+    their plots effectively. The system features tools for creating plot structures, 
+    managing characters, and organizing story events. 
+    With the design and functionality of this web application, the 
+    developers hope that it will support writers in systematically organizing and 
+    designing their story plots. Additionally, the application aims to meet its 
+    intended purpose and be a practical tool for real-world use. 
+    
+    Keywords: plot design, writers, web application, novel writing
