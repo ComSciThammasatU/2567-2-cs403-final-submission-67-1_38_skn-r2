@@ -1,0 +1,184 @@
+/* RelationshipEditor.css */
+
+.relationship-editor {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: transparent;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.relationship-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.editor-toolbar {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.editor-toolbar input[type="text"] {
+  font-size: 16px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.editor-toolbar button {
+  background: #4a6ef5;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.editor-toolbar button:hover {
+  background: #3a59c9;
+}
+
+.load-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  color: #000;
+  width: 180px;
+  margin-top: 4px;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.load-menu div {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.load-menu div:last-child {
+  border-bottom: none;
+}
+
+.load-menu div:hover {
+  background: #f1f1f1;
+}
+
+.reactflow-wrapper {
+  height: calc(100vh - 56px);
+}
+
+.fixed-controls,
+.fixed-minimap {
+  background: #fff !important;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+}
+
+.character-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background: white;
+  border-left: 1px solid #e0e0e0;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+  box-sizing: border-box;
+  transition: right 0.3s ease-in-out;
+}
+
+.character-sidebar.hidden {
+  right: -260px;
+}
+
+.character-sidebar input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.character-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: grab;
+  transition: box-shadow 0.2s;
+}
+
+.character-card:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.character-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.character-sidebar h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000b9;
+  margin-bottom: 12px;
+  border-left: 4px solid #2e0089;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.295);
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+}
+.character-sidebar h4::before {
+  content: "🎯";
+  font-size: 18px;
+}
+
+.draggable-character {
+  cursor: grab;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.draggable-character:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+.delete-button {
+  background-color: #d9534f !important;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.delete-button:hover {
+  background-color: #c9302c;
+}

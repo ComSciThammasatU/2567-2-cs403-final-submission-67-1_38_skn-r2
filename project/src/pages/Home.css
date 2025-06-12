@@ -1,0 +1,200 @@
+/* ตั้งค่าพื้นฐานของ html และ body */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right top, #a06de4, #8488f6, #6b9eff, #5db2ff, #62c3ff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden; /* ป้องกัน scroll แนวนอน */
+}
+
+/* Wrapper หลักของหน้า Home */
+.home-wrapper {
+  padding: 40px 40px;
+  background: transparent;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+/* ส่วนหัวของหน้า Home */
+.home-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* ชื่อเรื่องหลักในหน้า Home */
+.home-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* คำอธิบายย่อยใต้ชื่อเรื่อง */
+.home-subtitle {
+  font-size: 20px;
+  color: #dadada;
+  margin-bottom: 30px;
+}
+
+/* โซนแสดงฟีเจอร์แบบกล่องเรียงกัน */
+.home-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* ระยะห่างระหว่างกล่อง */
+}
+
+/* การจัดแต่งกล่องฟีเจอร์ */
+.feature-card {
+  padding: 20px 30px;
+  width: 280px;
+  text-align: center;
+  background: rgba(191, 209, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 12px;
+  border: 3px double rgba(255, 255, 255, 0.18);
+}
+
+/* หัวข้อในกล่องฟีเจอร์ */
+.feature-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* ข้อความในกล่องฟีเจอร์ */
+.feature-card p {
+  font-size: 16px;
+  color: #dadada;
+}
+
+/* ปุ่มยืนยัน (เช่น ปุ่มเข้าสู่ระบบ) */
+.auth-button {
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 10px 22px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(140, 170, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
+
+/* สถานะ hover ของปุ่มยืนยัน */
+.auth-button:hover {
+  background: rgba(140, 170, 255, 0.4);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* สถานะ active ของปุ่มยืนยัน */
+.auth-button.active {
+  background-color: white;
+  color: #000000;
+  font-weight: bold;
+  border-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
+}
+
+/* ปุ่มสไตล์ bn33 (ปุ่มเฉพาะที่มีไล่สี) */
+.bn33 {
+  border: 2px solid white;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #b978eb, #81bded);
+  padding: 0.7em 2em;
+  border-radius: 25px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.4);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+/* สถานะ hover ของปุ่ม bn33 */
+.bn33:hover {
+  box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.6);
+  transform: scale(1.03);
+}
+
+/* ช่องกรอกข้อมูลสำหรับหน้า auth */
+.auth-input {
+  width: 80%;
+  max-width: 300px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* สถานะ focus ของช่องกรอกข้อมูล */
+.auth-input:focus {
+  border-color: #4568dc;
+  box-shadow: 0 0 5px rgba(69, 104, 220, 0.5);
+}
+
+/* ปุ่มสำหรับส่งลิงก์ยืนยันใหม่ (resend) */
+.resend-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+/* สถานะปิดใช้งานของปุ่ม resend */
+.resend-button:disabled {
+  color: gray;
+  text-decoration: none;
+  cursor: not-allowed;
+}
+
+/* Container สำหรับปุ่มเริ่มต้นในหน้า Home */
+.home-start-buttons-container {
+  display: flex;
+  flex-direction: column; /* จัดเรียงปุ่มในแนวตั้ง */
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* ปุ่มเริ่มต้นทั่วไป */
+.home-start-button {
+  padding: 0.8em 2.2em;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  margin: 0;
+  width: auto;
+}
+
+/* ปุ่มเริ่มต้นแบบ primary (ไล่เฉดสี) */
+.home-start-button.primary {
+  background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ปุ่มเริ่มต้นแบบ secondary (โปร่งใส มีเส้นขอบจุด) */
+.home-start-button.secondary {
+  background: rgba(191, 209, 255, 0.201);
+  border: 3px dotted rgb(202, 202, 202);
+  color: white;
+  box-shadow: none;
+}
+
+/* สถานะ hover ของปุ่มเริ่มต้น */
+.home-start-button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}

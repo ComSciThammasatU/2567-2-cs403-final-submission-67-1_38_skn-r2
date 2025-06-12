@@ -1,0 +1,213 @@
+/* container ครอบทั้งหมด */
+.system-node-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #1e293b; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.2);
+  color: #e0e7ff; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  height: auto;
+}
+
+.system-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* ช่องใส่ชื่อ */
+.system-node-title {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1.5px solid #3b82f6; 
+  background-color: #334155; 
+  color: #e0e7ff;
+  font-weight: 600;
+  font-size: 14px;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: outline-color 0.2s ease;
+}
+
+.system-node-title:focus {
+  outline-color: #60a5fa;
+  background-color: #1e293b;
+}
+
+/* select เลือกตัวละคร */
+.system-node-wrapper select {
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1.5px solid #3b82f6;
+  background-color: #334155;
+  color: #e0e7ff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.system-node-wrapper select:hover {
+  border-color: #60a5fa;
+}
+
+/* ปุ่ม + Add และ Confirm */
+.system-node-button {
+  margin-top: 6px;
+  padding: 6px 10px;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgb(59 130 246 / 0.5);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.system-node-button:hover {
+  background-color: #2563eb;
+}
+
+/* รูปตัวละคร */
+.system-node-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #60a5fa;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 2px 8px rgb(96 165 250 / 0.6);
+}
+
+/* ชื่อตัวละครใต้รูป */
+.system-node-character-name {
+  text-align: center;
+  color: #93c5fd;
+  font-weight: 600;
+  margin-top: 4px;
+  font-size: 13px;
+  user-select: text;
+}
+
+/* input สำหรับ saveName ด้านบน */
+.system-hierarchy-editor > div > input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1.8px solid #3b82f6;
+  background-color: #1e293b;
+  color: #e0e7ff;
+  font-weight: 600;
+  font-size: 15px;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: outline-color 0.2s ease;
+  width: 180px;
+}
+
+.system-hierarchy-editor > div > input[type="text"]:focus {
+  outline-color: #60a5fa;
+  background-color: #111827;
+}
+
+/* ปุ่ม Save, Load, Root Node ด้านบน */
+.system-hierarchy-editor > div > button,
+.system-hierarchy-editor > div > select {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.system-hierarchy-editor > div > button {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 3px 8px rgb(59 130 246 / 0.6);
+}
+
+.system-hierarchy-editor > div > button:hover {
+  background-color: #2563eb;
+}
+
+.system-hierarchy-editor > div > select {
+  background-color: #1e293b;
+  color: #e0e7ff;
+  border: 1.5px solid #3b82f6;
+}
+
+.system-hierarchy-editor > div > select:hover {
+  border-color: #60a5fa;
+}
+
+/* ReactFlow background and nodes */
+.react-flow__node-default {
+  background-color: #1e293b !important;
+  border: 1.5px solid #3b82f6 !important;
+  color: #e0e7ff !important;
+  box-shadow: 0 4px 12px rgb(59 130 246 / 0.4) !important;
+}
+
+.react-flow__handle {
+  background-color: #3b82f6 !important;
+}
+
+/* Scrollbar ของ ReactFlow */
+.react-flow__viewport::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.react-flow__viewport::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+.react-flow__viewport::-webkit-scrollbar-track {
+  background-color: #0f172a;
+}
+
+/* Controls and Minimap */
+.fixed-controls {
+  position: fixed !important;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.fixed-minimap {
+  position: fixed !important;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.delete-button {
+  background-color: #d9534f !important;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.delete-button:hover {
+  background-color: #c9302c;
+}
