@@ -17,23 +17,26 @@
 ## 📦 โครงสร้างโปรเจกต์
 
 project/
-├── server/                  # ✅ Backend Node.js + Python
-│   ├── app.py              # API สำหรับพจนานุกรม (Python)
-│   ├── .env                # Environment variables (Mongo URI)
-│   ├── models/             # MongoDB Schemas เช่น Character, Manuscript, etc.
-│   ├── routes/             # REST API routes (12 กลุ่ม)
-│   └── uploads/            # ไฟล์ที่ผู้ใช้อัปโหลด
-├── src/                    # ✅ React Frontend
-│   ├── pages/              # 35 หน้า UI เช่น ManuscriptPanel, TimelinePanel
-│   ├── components/         # ส่วนย่อยเช่น Footer, TutorialModal
-│   ├── assets/             # ไฟล์ภาพ
-│   └── App.js, index.js
-├── public/                 # favicon, manifest, index.html
-├── venv/                   # Python virtual environment
-├── package.json            # Node dependencies
-├── README.md               # คู่มือโครงการ (ไฟล์นี้)
+├── server/
+│ ├── app.py
+│ ├── .env
+│ ├── models/
+│ ├── routes/
+│ └── uploads/
+├── src/
+│ ├── pages/
+│ ├── components/
+│ ├── assets/
+│ └── App.js, index.js
+├── public/
+├── venv/
+├── package.json
+├── README.md
 ├── CS369_Report_Group11.pdf
 
+yaml
+คัดลอก
+แก้ไข
 
 ---
 
@@ -41,7 +44,7 @@ project/
 
 - Node.js v18+
 - MongoDB (Local หรือ MongoDB Atlas)
-- Python 3.9+ (สำหรับ dictionary API)
+- Python 3.9+
 - Git
 
 ---
@@ -49,78 +52,78 @@ project/
 ## 🔧 วิธีติดตั้ง
 
 ### 1. Clone โปรเจกต์
+
+```bash
+git clone https://github.com/ComSciThammasatU/2567-2-cs403-final-submission-67-1_38_skn-r2.git
+cd 2567-2-cs403-final-submission-67-1_38_skn-r2/project
+2. ติดตั้งและรัน Backend (Node.js + Python)
 bash
-git clone https://github.com/Guyzaza18121/cs403-taledge.git
-
-cd taledge/project
-
-
-### 2. ติดตั้งและรัน Backend (Node.js + Python)
-bash
+คัดลอก
+แก้ไข
 cd server
 npm install
-# Python virtual env
+
+# สร้าง Python virtual environment
 python -m venv venv
 venv\Scripts\activate  # บน Windows
+
+# ติดตั้งไลบรารีที่จำเป็น
 pip install pythainlp nltk flask
 python -m nltk.downloader omw-1.4
+
+# เริ่มต้นเซิร์ฟเวอร์
 node app.js
+📄 ตัวอย่าง .env ที่ต้องสร้างใน /server:
 
-
-📄 .env ตัวอย่าง
+ini
+คัดลอก
+แก้ไข
 MONGODB_URI=mongodb://localhost:27017/taledge
 PORT=5000
-
-
-### 3. ติดตั้งและรัน Frontend
+3. ติดตั้งและรัน Frontend
 bash
+คัดลอก
+แก้ไข
 cd ../src
 npm install
 npm start
+จากนั้นเข้าใช้งานที่ http://localhost:3000
 
-แล้วเปิด [http://localhost:3000](http://localhost:3000)
+🧭 วิธีใช้งานระบบ
+สมัครสมาชิก / ล็อกอินที่หน้า Home.js
 
----
+สร้างโปรเจกต์ใหม่ผ่าน CreateProject.js
 
-## 🧭 วิธีใช้งานระบบ
+เข้าใช้งานระบบหลักผ่าน EditorLayout.js (มีเมนูซ้าย)
 
-1. สมัครสมาชิก / ล็อกอินที่หน้า Home.js
-2. สร้างโปรเจกต์ใหม่จาก CreateProject.js
-3. เข้าสู่หน้า Editor (EditorLayout.js) ซึ่งมี sidebar ด้านซ้ายแยกเป็นหมวดต่าง ๆ
+✨ ส่วนประกอบสำคัญ
+หน้า	หน้าที่
+NewCharacter.js	สร้างตัวละคร
+ClanSubfiction.js	สร้างกลุ่มตัวละคร (แคลน)
+RelationshipEditor.js	วาดกราฟความสัมพันธ์
+WorldPanel.js	สร้างโลกของนิยาย
+ItemsPanel.js	จัดการไอเท็ม
+ManuscriptPanel.js	เขียนบทนิยาย
+Chapter.js	รวมบททั้งหมด
+TimelinePanel.js	กำหนดลำดับเวลา
+ResearchPanel.js	เก็บ PDF, วิดีโอ, ลิงก์
 
-### ✨ ส่วนประกอบสำคัญ
+🧩 Backend API Routes
+API ทั้งหมดอยู่ใน server/routes/:
 
-| หน้าหลัก | รายละเอียด |
-|----------|-------------|
-| NewCharacter.js | สร้างตัวละคร ใส่รูป ลิงก์ นิสัย |
-| ClanSubfiction.js | สร้างกลุ่มตัวละคร (แคลน) |
-| RelationshipEditor.js | วาดกราฟความสัมพันธ์ (drag & drop) |
-| WorldPanel.js | สร้างข้อมูลเกี่ยวกับโลก นิยาย |
-| ItemsPanel.js | จัดการไอเท็ม เช่น หนังสือ อุปกรณ์ |
-| ManuscriptPanel.js | เขียนบทนิยาย แบ่งเป็นบท |
-| Chapter.js | รวมบททั้งหมดที่เขียน |
-| TimelinePanel.js | จัดลำดับเวลาเรื่อง |
-| ResearchPanel.js | เก็บลิงก์/วิดีโอ/PDF สำหรับค้นคว้า |
+/auth, /character, /group, /timeline, /relationship
 
----
+/item, /system, /world, /manuscript, /notepad, /research
 
-## 🧩 Backend API Routes
+แต่ละ route จะเชื่อมกับ Schema ใน server/models/ เช่น:
 
-ใน server/routes/ มีทั้งหมด 12 route เช่น:
-- /auth, /character, /group, /timeline, /relationship
-- /research, /system, /manuscript, /notepad, /item, /world
+Character.js, TimelineEvent.js, World.js, SystemHierarchy.js
 
-เชื่อมโยงกับ server/models/ ที่มี Schema เช่น:
-- Character.js, TimelineEvent.js, SystemHierarchy.js, World.js
+📌 Topics
+Topic 1: ระบบจัดการตัวละครและกลุ่ม (Characters & Clans)
 
----
+Topic 2: ระบบเขียนบทและไทม์ไลน์
 
-## 📌 Topics
+Topic 3: ระบบ Tree/Graph สำหรับโลกและความสัมพันธ์
 
-**Topic 1:** ระบบจัดการตัวละครและความสัมพันธ์ (Character & Clan)  
-**Topic 2:** ระบบเขียนนิยายและบทแบบมี Timeline  
-**Topic 3:** ระบบโครงสร้างโลกและระบบย่อยแบบ Tree/Graph
-
----
-
-📄 *ไฟล์นี้ใช้ประกอบการส่งงานโครงงาน CS403 ภาคปลาย ปี 2567*
+📄 ไฟล์นี้ใช้ประกอบการส่งงานโครงงานวิชา คพ.403 ภาคปลาย ปี 2567
