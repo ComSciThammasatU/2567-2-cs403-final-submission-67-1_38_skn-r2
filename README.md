@@ -90,7 +90,11 @@ cd server
 python -m venv venv
 venv\Scripts\activate        # สำหรับ Windows
 pip install flask pythainlp nltk
+pip install flask_cors
 python -m nltk.downloader omw-1.4
+
+ติดตั้ง nodemailer ที่โปรเจกต์ใน backend (โฟลเดอร์ที่มีไฟล์ server.js หรือไฟล์หลักของ Express)
+npm install nodemailer
 python app.py                  # เปิด Dictionary API ที่ http://127.0.0.1:5000/lookup
 ```
 
@@ -106,6 +110,7 @@ node server.js                 # หรือ node app.js (ตามชื่อ
 > ตรวจสอบให้ไฟล์ `.env` มีค่าเช่นนี้:
 
 ```env
+ตัวอย่าง : Guyzaza18121 ผู้ติดตั้งสามารถเอา Username ของตัวเองมาใส่แทนจุดนี้ได้เลย
 MONGODB_URI=mongodb+srv://Guyzaza18121@cluster0.jrkaopc.mongodb.net/fictiondb
 PORT=5000
 ```
