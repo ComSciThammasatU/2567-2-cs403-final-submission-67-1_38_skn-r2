@@ -1,4 +1,4 @@
-﻿ชั้นวางเรื่องราว
+ชั้นวางเรื่องราว
 Taledge
 ABSTRACT
 
@@ -16,3 +16,4 @@ designing their story plots. Additionally, the application aims to meet its
 intended purpose and be a practical tool for real-world use. 
     
 Keywords: plot design, writers, web application, novel writing
+
