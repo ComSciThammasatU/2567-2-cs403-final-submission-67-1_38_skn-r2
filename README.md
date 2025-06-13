@@ -121,7 +121,7 @@ PORT=5000
 ### 5. Setup ฝั่ง Frontend (React)
 
 ```bash
-cd ../src
+cd src
 npm install
 npm start                      # เปิดหน้าเว็บที่ http://localhost:3000
 ```
