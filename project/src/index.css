@@ -1,0 +1,32 @@
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: blue;
+}
+/* ซ่อน ResizeObserver warning */
+html,
+body {
+  overflow: hidden;
+}
+.react-flow__viewport {
+  overflow: hidden !important;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+}

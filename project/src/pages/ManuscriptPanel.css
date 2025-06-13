@@ -1,0 +1,303 @@
+/* ======= Container หลักของ Manuscript ======= */
+.manuscript-container {
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  margin: auto;
+  margin-top: 30px;
+  max-width: 1200px;
+  transition: margin-right 0.3s;
+}
+
+/* เพิ่มระยะ margin ด้านขวาเมื่อ sidebar แสดงอยู่ */
+.manuscript-container.with-sidebar,
+.with-sidebar {
+  margin-right: 280px;
+}
+
+/* ======= หัวเรื่อง ======= */
+h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* ======= กล่อง Section แต่ละบท ======= */
+.card-section {
+  margin-bottom: 30px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+
+/* ======= กลุ่ม input สำหรับบท ======= */
+.chapter-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.chapter-input-group input.chapter-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ======= input และ textarea ======= */
+.card-input,
+.manuscript-textarea {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: border 0.2s;
+}
+
+.card-input:focus,
+.manuscript-textarea:focus {
+  border-color: #007bff;
+  background: #fff;
+  outline: none;
+}
+
+/* ======= textarea สำหรับเนื้อหาบทความ ======= */
+.manuscript-textarea {
+  box-sizing: border-box;
+  line-height: 1.6;
+  padding: 12px;
+  resize: none;
+  overflow: hidden;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+/* ======= ปุ่มทั่วไป ======= */
+.button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+/* ======= กล่องข้อความคำอธิบาย ======= */
+.definition-text {
+  margin-top: 10px;
+  white-space: pre-wrap;
+  line-height: 2;
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* ======= Sidebar ======= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background: white;
+  border-left: 1px solid #e0e0e0;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.sidebar h3,
+.sidebar h4 {
+  margin-bottom: 15px;
+}
+
+/* ======= การ์ดตัวละครที่แสดงใน sidebar ======= */
+.character-card {
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.character-card:hover {
+  background: #eef2f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* รูป thumbnail ของตัวละคร */
+.character-thumb {
+  width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+/* รายละเอียดตัวละคร */
+.character-detail {
+  background: linear-gradient(145deg, #ffffff, #f5f5ff);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-size: 15px;
+  max-width: 400px;
+}
+
+/* ======= กล่องค้นหาศัพท์ ======= */
+.dictionary-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.dictionary-input-group input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ======= ปุ่ม Save กลางหน้า ======= */
+.button-save-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.button-save {
+  background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 16px;
+  min-width: 180px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.button-save:hover {
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+  color: #550bbc;
+  transform: scale(1.03);
+}
+
+.button-save:active {
+  transform: scale(0.97);
+}
+
+/* ======= ปุ่มค้นหา ======= */
+.button-search {
+  background: linear-gradient(135deg, #74adff, #7ba2ff, #8d94ff, #a584ff, #c06eff);
+  color: white;
+}
+
+.button-search:hover {
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+}
+
+/* ======= ปุ่มรีเซ็ตคำค้น ======= */
+.button-reset {
+  background: transparent;
+  border: 2.5px dotted rgb(202, 202, 202);
+  color: rgb(84, 84, 84);
+  box-shadow: none;
+}
+
+.button-reset:hover {
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+}
+
+/* ======= ปุ่มเครื่องมือเสริม (tools) ======= */
+.button-tools {
+  background: linear-gradient(135deg, #ef8a91, #ffa0a7);
+  border: 2.5px double rgb(202, 202, 202);
+  color: #7f4d3e;
+}
+
+.button-tools:hover {
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+  background-color: #e879f9; /* อาจต้องเลือกแค่หนึ่ง background */
+}
+
+/* ======= เมนูใน sidebar ======= */
+.sidebar-menu button {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f0f4ff, #d6e0ff);
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu button.active {
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+  color: #550bbc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-menu button:hover {
+  background: linear-gradient(135deg, #d2e3ff, #e0d6ff);
+}
+
+/* ======= ปุ่มกลับ ======= */
+.button-back {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f4f4f4, #eaeaff);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.button-back:hover {
+  background: linear-gradient(135deg, #d2e3ff, #e0d6ff);
+}
+
+/* ======= ปรับขนาด Timeline ======= */
+.timeline-scale {
+  transform: scale(0.95);
+  transform-origin: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+  border-radius: 25px;
+}

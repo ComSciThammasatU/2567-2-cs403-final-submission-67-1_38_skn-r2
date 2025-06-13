@@ -1,0 +1,122 @@
+/* ตัวห่อทั้งหมดของส่วน clan พร้อมกำหนด padding และฟอนต์ */
+.clan-wrapper {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* โครงสร้าง layout ใช้ flex และเว้นช่องว่างระหว่าง panel */
+.clan-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* แผงแสดงรายชื่อ clan กำหนดความกว้างและเส้นขอบด้านขวา */
+.clan-list-panel {
+  width: 220px;
+  border-right: 2px solid #ccc;
+  padding-right: 20px;
+}
+
+/* หัวข้อใน clan-list-panel กำหนด margin ด้านล่าง */
+.clan-list-panel h3 {
+  margin-bottom: 10px;
+}
+
+/* รายการ clan แบบไม่ใช้ bullet และตั้งสีตัวอักษร */
+.clan-list {
+  list-style: none;
+  padding: 0;
+  color: #000;
+}
+
+/* รายการ clan แต่ละตัว มี padding, margin, background และ border-radius */
+.clan-list li {
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* เปลี่ยนสีพื้นหลังเมื่อ hover รายการ clan */
+.clan-list li:hover {
+  background-color: #dceeff;
+}
+
+/* สถานะ active ของ clan รายการ เปลี่ยนสีพื้นหลังและตัวอักษรเน้น */
+.clan-list li.active {
+  background-color: #0077cc;
+  color: white;
+  font-weight: bold;
+}
+
+/* แผงแสดงสมาชิก clan ใช้ flex-grow เต็มพื้นที่ที่เหลือ */
+.clan-member-panel {
+  flex: 1;
+}
+
+/* หัวข้อในแผงสมาชิก clan กำหนด margin ด้านล่าง */
+.clan-member-panel h3 {
+  margin-bottom: 16px;
+}
+
+/* รายการสมาชิก clan แบบ grid อัตโนมัติ กำหนดช่องว่างและขนาดคอลัมน์ */
+.member-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* การ์ดแสดงข้อมูลสมาชิก clan จัดแบบ flex มีช่องว่างและตกแต่งขอบ */
+.character-card {
+  display: flex;
+  gap: 12px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+/* รูป avatar ของสมาชิก clan กำหนดขนาดและเส้นขอบกลม */
+.character-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+/* ชื่อสมาชิก clan กำหนด margin และขนาดฟอนต์ */
+.character-info h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* รายละเอียดสมาชิก clan กำหนด margin, ขนาดฟอนต์ และสี */
+.character-info p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ข้อความ placeholder สีขาว ตัวเอียง และ padding */
+.placeholder {
+  color: #ffffff;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* ปุ่มลบสมาชิก clan ไม่มีพื้นหลัง เส้นขอบ สีแดง และเปลี่ยน cursor */
+.delete-btn {
+  margin-left: 8px;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+}

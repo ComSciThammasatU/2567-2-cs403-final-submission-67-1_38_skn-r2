@@ -1,0 +1,124 @@
+/* Wrapper หลักของหน้า New Character */
+.new-char-wrapper {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Grid layout สำหรับการจัด panel เป็นคอลัมน์ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 24px;
+}
+
+/* Panel ของแต่ละตัวละคร */
+.character-panel {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* หัวข้อภายในแต่ละ panel */
+.character-panel h4 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ตัวอย่างภาพ */
+.preview {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* พื้นที่ว่างสำหรับแสดงภาพหากยังไม่มีการอัปโหลด */
+.image-placeholder {
+  background: #ddd;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ฟอร์ม: input, textarea, select */
+.character-panel input,
+.character-panel textarea,
+.character-panel select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin: 4px 0;
+  resize: none;
+  overflow: hidden;
+}
+
+/* กำหนดเฉพาะเพิ่มเติมให้ textarea */
+.character-panel textarea {
+  min-height: 100px;
+}
+
+/* ปุ่มในแต่ละ panel */
+.character-panel button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+/* สีปุ่มเมื่อ hover */
+.character-panel button:hover {
+  background: #005fa3;
+}
+
+/* Container สำหรับปุ่ม Save ทั้งหมด */
+.button-save-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* ปุ่ม Save หลัก */
+.button-save {
+  background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 16px;
+  min-width: 200px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+/* สีและเอฟเฟกต์เมื่อ hover ที่ปุ่ม Save */
+.button-save:hover {
+  background: linear-gradient(135deg, #b9dfff, #cabaff);
+  color: #550bbc;
+  transform: scale(1.03);
+}
+
+/* เอฟเฟกต์เมื่อคลิกปุ่ม Save */
+.button-save:active {
+  transform: scale(0.97);
+}

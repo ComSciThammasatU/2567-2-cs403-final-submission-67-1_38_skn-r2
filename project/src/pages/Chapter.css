@@ -1,0 +1,138 @@
+/* ตั้งค่า box-sizing เป็น border-box ให้กับทุกองค์ประกอบ */
+* {
+  box-sizing: border-box;
+}
+
+/* Container หลักของ chapter */
+.chapter-container {
+  padding: 30px;
+  font-family: 'Sarabun', sans-serif;
+  background: transparent;
+}
+
+/* หัวข้อ chapter */
+.chapter-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* รายการ chapter แบบลิสต์ ไม่มีสัญลักษณ์หน้าแต่ละข้อ */
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* รายการ chapter แต่ละข้อ */
+.chapter-item {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #dce3f5;
+  border-radius: 12px;
+
+  /* ใช้ gradient สีขาว - ฟ้าอ่อน */
+  background: linear-gradient(145deg, #ffffff, #f2f4ff);
+
+  /* เงาเบา ๆ เพื่อความลึก */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+
+  /* จัด layout ให้เป็น flex box เพื่อจัดเรียงเนื้อหาในแถว */
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  /* เพิ่ม transition ตอนเคลื่อนที่ */
+  transition: transform 0.2s ease;
+
+  /* ป้องกันการเลือกข้อความในรายการ */
+  user-select: none;
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ชี้บน chapter-item */
+.chapter-item:hover {
+  transform: translateY(-2px);
+}
+
+/* ปุ่มหรือไอคอนสำหรับจับลาก (drag handle) */
+.drag-handle {
+  font-size: 20px;
+  padding-top: 6px;
+  color: #888;
+  cursor: grab;
+
+  /* จัดตำแหน่งไอคอน */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding: 0 8px;
+  align-self: center;
+}
+
+/* เนื้อหาหลักของ chapter-item ให้ยืดเต็มที่ */
+.chapter-content {
+  flex-grow: 1;
+}
+
+/* ชื่อ chapter */
+.chapter-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #2e6ad5;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+/* ย่อหน้าเนื้อหาสั้น ๆ (excerpt) */
+.chapter-excerpt {
+  white-space: pre-line; /* รักษาการขึ้นบรรทัดใหม่ */
+  max-height: 80px;
+  overflow: hidden; /* ซ่อนเนื้อหาที่เกินขนาด */
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ปุ่มเปิด chapter */
+.open-button {
+  padding: 6px 12px;
+  background-color: #6d89ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+
+  /* เพิ่ม transition สีพื้นหลัง */
+  transition: background 0.2s ease;
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ชี้บนปุ่มเปิด */
+.open-button:hover {
+  background-color: #4a6ce3;
+}
+
+/* โซนสำหรับปล่อย chapter เพื่อลบ (trash drop zone) */
+.trash-dropzone {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border: 2px dashed #ff4d4f;
+  border-radius: 10px;
+
+  /* สีพื้นหลังโปร่งแสงและสีตัวอักษร */
+  background: #fff0f08a;
+  color: #c00;
+  font-weight: bold;
+
+  /* transition เปลี่ยนสีพื้นหลัง */
+  transition: background 0.3s ease;
+}
+
+/* สถานะเมื่อมีการลากวางอยู่บนโซนลบ */
+.trash-dropzone.drag-over {
+  background: #ffe6e6;
+}
